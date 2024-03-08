@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas JS 1</title>
+    <style>
+      h2 {
+        text-align: center;
+        padding: 10px;
+        font-size: 30px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #9f70fd;
+        color:whitesmoke;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      tr,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        
+      }
+      tfoot{
+        padding:10px;
+        margin:5px;
+        background-color: #7F27FF;
+        color: whitesmoke;
+      }
+      thead{
+        padding:20px;
+        margin:5px;
+        background-color: #9f70fd;
+        color: whitesmoke;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Data Pegawai</h2>
+
+    <script>
+      //Data Pegawai
+      let pegawai = "Ridwan";
+      let jabatan = "Manager";
+      let status = "Menikah";
+
+      //untuk menghitung gaji
+      if (jabatan == "Manager") {
+        gajiPokok = 15000000;
+      } else if (jabatan == "Asisten Manager") {
+        gajiPokok = 10000000;
+      } else if (jabatan == "Staff") {
+        gajiPokok = 5000000;
+      } else {
+        gajiPokok = 0;
+      }
+      
+      let tunjanganJabatan = 0.15 * gajiPokok;
+      let bpjs = 0.1 * gajiPokok;
+      let tunjanganKeluarga = status == "Menikah" ? 0.2 * gajiPokok : 0;
+      let totalGaji = gajiPokok + tunjanganJabatan + tunjanganKeluarga + bpjs;
+
+      document.write("<table border=1px>");
+      document.write(
+        "<thead><tr><th>Nama Pegawai</th><th>Jabatan</th><th>Status</th><th>Gaji Pokok</th><th>Tunjangan Jabatan</th><th>BPJS</th><th>Tunjangan Keluarga</th></tr></thead>"
+      );
+      document.write("<tbody>");
+      document.write("<tr>");
+      document.write("<td>" + pegawai + "</td>");
+      document.write("<td>" + jabatan + "</td>");
+      document.write("<td>" + status + "</td>");
+      document.write("<td>" + gajiPokok + "</td>");
+      document.write("<td>" + tunjanganJabatan + "</td>");
+      document.write("<td>" + bpjs + "</td>");
+      document.write("<td>" + tunjanganKeluarga + "</td>");
+      document.write("</tr>");
+      document.write("</tbody>");
+      document.write("<tfoot>");
+      document.write("<tr>");
+      document.write('<td colspan="7">Total Gaji : ' + totalGaji + "</td>");
+      document.write("</tr>");
+      document.write("</tfoot>");
+      document.write("</table>");
+    </script>
+  </body>
+</html>
