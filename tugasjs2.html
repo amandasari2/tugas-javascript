@@ -1,0 +1,102 @@
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  h2 {
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    background-color: aqua;
+    padding: 10px;
+    margin: 10px;
+  }
+  tr,
+  td,
+  th {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    font-family: cursive;
+    font-size: 20px;
+  }
+  th {
+    background-color: aquamarine;
+  }
+</style>
+
+<h2>Data Nilai Mahasiswa/i</h2>
+
+<script>
+  let s1 = { nama: "Nadia", nilai: 40 };
+  let s2 = { nama: "Mayang", nilai: 76 };
+  let s3 = { nama: "Sarmila", nilai: 65 };
+  let s4 = { nama: "Manda", nilai: 90 };
+  let s5 = { nama: "Yuyun", nilai: 27 };
+
+  let siswa = [s1, s2, s3, s4, s5];
+</script>
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>Nilai</th>
+      <th>Keterangan</th>
+      <th>Grade</th>
+      <th>Predikat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <script>
+      var no = 1;
+      for (s of siswa) {
+        //ternary
+        let ket = s.nilai >= 60 ? "Lulus" : "Gagal";
+        let grade = "";
+        let predikat = "";
+        //if multi kondisi
+        if (s.nilai > 85 && s.nilai <= 100) grade = "A";
+        else if (s.nilai > 75 && s.nilai <= 85) grade = "B";
+        else if (s.nilai >= 60 && s.nilai <= 75) grade = "C";
+        else if (s.nilai > 30 && s.nilai <= 60) grade = "D";
+        else if (s.nilai >= 0 && s.nilai <= 30) grade = "E";
+        else grade = "";
+
+        switch (grade) {
+          case "A":
+            predikat = "Sempurna";
+            break;
+          case "B":
+            predikat = "Baik";
+            break;
+          case "C":
+            predikat = "Cukup";
+            break;
+          case "D":
+            predikat = "Kurang";
+            break;
+          case "E":
+            predikat = "Buruk";
+            break;
+          default:
+            predikat = "";
+            break;
+        }
+
+        document.write(`<tr>
+            <td>${no++}</td>
+            <td>${s.nama}</td>
+            <td>${s.nilai}</td>
+            <td>${ket}</td>
+            <td>${grade}</td>
+            <td>${predikat}</td>
+            </tr>`
+        );
+      }
+    </script>
+  </tbody>
+</table>
