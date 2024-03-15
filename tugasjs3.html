@@ -1,61 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tugas JS Eksternal</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <style>
+      table {
+        background-color: aqua;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .title {
+        font-family: monospace;
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      tr,
+      td,
+      th {
+        padding: 5px;
+        margin: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      input {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      button {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      button:hover {
+        background-color: aquamarine;
+      }
+
+      #hasil {
+        padding: 20px;
+        margin: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
     <form id="frm" name="forms">
-        <table>
-            
-            <tr class="title">
-                <th colspan="2">
-                    Form Input
-                    <hr>
-                </th>
-                
-            </tr>
-           
-            <tr>
-                <td>
-                    <label for="">Nama</label>
-                </td>
-                <td>
-                    <input type="text" name="nama" id="" placeholder="Masukkan Nama Anda">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Pekerjaan</label>
-                </td>
-                <td>
-                    <input type="text" name="pekerjaan" id="" placeholder="Masukkan Pekerjaan Anda">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Hobby</label>
-                </td>
-                <td>
-                    <input type="text" name="hobby" id="" placeholder="Masukkan Hobby Anda">
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2">
-                    <button type="button" name="proses" onclick="dataPerson()">Submit</button>
-                    <button type="reset" onclick="resetData()">Reset</button>
-                </th>
-            </tr>
-        </table>
+      <table>
+        <tr class="title">
+          <th colspan="2">
+            Form Input
+            <hr />
+          </th>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="">Nama</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="nama"
+              id=""
+              placeholder="Masukkan Nama Anda"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Pekerjaan</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="pekerjaan"
+              id=""
+              placeholder="Masukkan Pekerjaan Anda"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Hobby</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="hobby"
+              id=""
+              placeholder="Masukkan Hobby Anda"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">
+            <button type="button" name="proses" onclick="dataPerson()">
+              Submit
+            </button>
+            <button type="reset" onclick="resetData()">Reset</button>
+          </th>
+        </tr>
+      </table>
     </form>
 
-    <center id="hasil">
+    <center id="hasil"></center>
 
-    </center>
-    
     <script src="js/script.js"></script>
-
-</body>
+  </body>
 </html>
