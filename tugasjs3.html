@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JS Eksternal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form id="frm" name="forms">
+        <table>
+            
+            <tr class="title">
+                <th colspan="2">
+                    Form Input
+                    <hr>
+                </th>
+                
+            </tr>
+           
+            <tr>
+                <td>
+                    <label for="">Nama</label>
+                </td>
+                <td>
+                    <input type="text" name="nama" id="" placeholder="Masukkan Nama Anda">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Pekerjaan</label>
+                </td>
+                <td>
+                    <input type="text" name="pekerjaan" id="" placeholder="Masukkan Pekerjaan Anda">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Hobby</label>
+                </td>
+                <td>
+                    <input type="text" name="hobby" id="" placeholder="Masukkan Hobby Anda">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="button" name="proses" onclick="dataPerson()">Submit</button>
+                    <button type="reset" onclick="resetData()">Reset</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <center id="hasil">
+
+    </center>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
