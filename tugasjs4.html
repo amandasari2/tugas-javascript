@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas JS Eksternal 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      form {
+        background-color: #9eddff;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      label {
+        padding: 5px;
+        margin: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      input {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      select {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      button {
+        padding: 5px;
+        margin: 5px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        padding: 10px;
+        font-size: 30px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        background-color: #6499e9;
+        color: black;
+      }
+      table {
+        width:110%;
+        border-collapse: collapse;
+      }
+      tr,
+      td,th {
+        border: 1px solid black;
+        padding:8px;
+        text-align: center;
+        
+      }
+      tfoot {
+        
+        background-color: #befff7;
+        color: black;
+      }
+      thead {
+        
+        background-color: #a6f6ff;
+        color: black;
+        font-size: 20px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Input Data Pegawai</h1>
+    <form action="" id="pegawaiForm">
+      <label for="">Nama Pegawai</label>
+      <input
+        type="text"
+        name="nama"
+        id="nama"
+        placeholder="Masukkan Nama Pegawai"
+      /><br />
+      <label for="">Jabatan</label>
+      <select name="jabatan" id=""></select
+      ><br />
+      <label for="">Status</label>
+      <select name="status" id=""></select
+      ><br />
+
+      <button type="button" name="" id="" onclick="tambahPegawai()">
+        Tambah Pegawai
+      </button>
+      <!-- <button type="reset" name="" id="" onclick="resetPegawai()">Reset</button> -->
+    </form>
+    <br />
+
+    <script src="js/pegawai.js"></script>
+  </body>
+</html>
