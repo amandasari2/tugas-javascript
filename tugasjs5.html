@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style1.css" />
+  </head>
+  <body>
+    <h2>Letakkan Kursor ke Masing - Masing Kotak untuk melihat gambar</h2>
+
+    <div id="div1">
+      Hewan Bebek
+      <div id="sound-box"></div>
+    </div>
+    <div id="div2">
+      Hewan Kucing
+    </div>
+    <div id="div3">
+        Hewan Ayam
+    </div>
+
+    <audio id="bebek" src="audio/bebek.mpeg"></audio>
+    <audio src="audio/ayam.mpeg" id="ayam"></audio>
+    <audio src="audio/kucing.mpeg" id="kucing"></audio>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $("document").ready(function () {
+        $("#div1").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://png.pngtree.com/thumb_back/fh260/background/20230518/pngtree-mallard-duck-aquatic-animal-stock-hd-image_2582559.jpg')",
+            "background-size": "cover",
+          });
+          $("#bebek")[0].play();
+        });
+
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "green",
+          });
+        });
+        
+        $("#div2").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://png.pngtree.com/background/20230612/original/pngtree-cute-cat-wallpaper-1-hd-picture-image_3174410.jpg')",
+            "background-size": "cover",
+          });
+          $("#kucing")[0].play();
+        });
+
+        $("#div3").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://png.pngtree.com/thumb_back/fw800/background/20230520/pngtree-ceramic-rooster-is-standing-with-colorful-feathers-image_2536794.jpg')",
+            "background-size": "cover",
+          });
+          $("#ayam")[0].play();
+        });
+      });
+    </script>
+  </body>
+</html>
